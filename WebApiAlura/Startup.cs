@@ -1,3 +1,4 @@
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -13,6 +14,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WebApiAlura.Data;
+using WebApiAlura.Profiles;
 
 namespace WebApiAlura
 {
@@ -36,6 +38,10 @@ namespace WebApiAlura
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebApiAlura", Version = "v1" });
             });
+
+            IMapper mapper = NinjaProfile.RegisterMaps().CreateMapper(); //AUTOMAPPER
+            services.AddSingleton(mapper);
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
