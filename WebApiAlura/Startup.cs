@@ -30,7 +30,7 @@ namespace WebApiAlura
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<NinjaContext>(options =>
+            services.AddDbContext<FilmeContext>(options =>
             options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddControllers();
@@ -39,8 +39,9 @@ namespace WebApiAlura
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebApiAlura", Version = "v1" });
             });
 
-            IMapper mapper = NinjaProfile.RegisterMaps().CreateMapper(); //AUTOMAPPER
+            IMapper mapper = FilmeProfile.RegisterMaps().CreateMapper(); //AUTOMAPPER
             services.AddSingleton(mapper);
+
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
         }
 

@@ -8,7 +8,7 @@ using WebApiAlura.Data;
 
 namespace WebApiAlura.Migrations
 {
-    [DbContext(typeof(NinjaContext))]
+    [DbContext(typeof(FilmeContext))]
     [Migration("20220427114819_Initial")]
     partial class Initial
     {
