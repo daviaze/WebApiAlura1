@@ -16,6 +16,7 @@ using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using WebApiAlura.Data;
 using WebApiAlura.Profiles;
+using WebApiAlura.Services;
 
 namespace WebApiAlura
 {
@@ -33,10 +34,15 @@ namespace WebApiAlura
         {
             services.AddDbContext<FilmeContext>(options =>
             options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
-
             services.AddControllers().AddJsonOptions(x =>
    x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve);
             ;
+            services.AddScoped<FilmeService, FilmeService>();
+            services.AddScoped<CinemaService, CinemaService>();
+            services.AddScoped<EnderecoService, EnderecoService>();
+            services.AddScoped<GerenteService, GerenteService>();
+            services.AddScoped<SessaoService, SessaoService>();
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebApiAlura", Version = "v1" });
@@ -44,7 +50,6 @@ namespace WebApiAlura
 
             IMapper mapper = FilmeProfile.RegisterMaps().CreateMapper(); //AUTOMAPPER
             services.AddSingleton(mapper);
-
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
         }
 

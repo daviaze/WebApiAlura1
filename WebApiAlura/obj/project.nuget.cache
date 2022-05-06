@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "ud6fNpZOB8AcOTYINsJQhq+CKycNXuLIuNgDqoaEXFdoHkFtet2ssX0a/xZItH5mXsGzE0zQnCLwmezR05HofA==",
+  "dgSpecHash": "wNstHLCNaS7t+X6Ee+K2uK75lK5nDQFAT15qcfz/QdUNyJYBT2Lfz/tDcUxK3Fi6lHILgvvhnNw/q0Y79glsXA==",
   "success": true,
   "projectFilePath": "C:\\desenvolvimento\\CursoAlura\\WebApiAlura\\WebApiAlura\\WebApiAlura.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\fluentresults\\3.5.0\\fluentresults.3.5.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
